@@ -1,0 +1,30 @@
+body {
+    background: black;
+}
+
+.cards {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.card {
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    aspect-ratio: 5/7.5;
+}
+
+.card.--small {
+    width: 12vmin;
+    border-radius: 1vmin;
+}
+
+.card.--medium {
+    width: 30vmin;
+    border-radius: 2vmin;
+}
