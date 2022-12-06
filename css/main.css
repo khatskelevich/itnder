@@ -1,4 +1,10 @@
 body {
+    height: 100vh;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
     background: black;
 }
 
@@ -8,8 +14,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
 }
 
 .card {
@@ -17,6 +21,9 @@ body {
 
     background-color: rgba(255, 255, 255, 0.5);
     aspect-ratio: 5/7.5;
+
+    transition: all .5s ease;
+    will-change: transform;
 }
 
 .card.--small {
@@ -27,4 +34,41 @@ body {
 .card.--medium {
     width: 30vmin;
     border-radius: 2vmin;
+    z-index: 2;
 }
+
+.cards:hover .card:nth-child(1) {
+    transform: rotate(15deg) translate(200px, -40px);
+}
+
+.cards:hover .card:nth-child(2) {
+    transform: rotate(6deg) translate(80px, -10px);
+}
+
+.cards:hover .card:nth-child(3) {
+    transform: rotate(-6deg) translate(-80px, -10px);
+}
+
+.cards:hover .card:nth-child(4) {
+    transform: rotate(-15deg) translate(-200px, -40px);
+}
+
+.cards:hover .card:nth-child(5) {
+    transform: rotate(-10deg) translate(300px, -200px);
+}
+
+.cards:hover .card:nth-child(6) {
+    transform: rotate(6deg) translate(260px, 300px);
+}
+
+.cards:hover .card:nth-child(7) {
+    transform: rotate(3deg) translate(-170px, -260px);
+}
+
+.cards:hover .card:nth-child(8) {
+    transform: rotate(-15deg) translate(-330px, 180px);
+}
+
+
+
+
