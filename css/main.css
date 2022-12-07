@@ -1,11 +1,27 @@
 body {
     height: 100vh;
 
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 
     background: black;
+}
+
+.cards-swiper,
+.cards,
+.card {
+    aspect-ratio: 5/7.5;
+    width: 30vmin;
+}
+
+.cards-swiper {
+    height: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    align-content: center;
+    justify-content: center;
 }
 
 .cards {
@@ -20,7 +36,6 @@ body {
     position: absolute;
 
     background-color: rgba(255, 255, 255, 0.5);
-    aspect-ratio: 5/7.5;
 
     transition: all .5s ease;
     will-change: transform;
@@ -32,7 +47,6 @@ body {
 }
 
 .card.--medium {
-    width: 30vmin;
     border-radius: 2vmin;
     z-index: 2;
 }
@@ -69,6 +83,31 @@ body {
     transform: rotate(-15deg) translate(-330px, 180px);
 }
 
+.buttons {
+    margin-top: 3vmin;
+    text-align: center;
+}
+
+.buttons > button {
+    height: 7vmin;
+    width: 7vmin;
+
+    margin-inline: 1vmin;
+
+    border-radius: 100%;
+    border: 0.4vmin solid white;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+.buttons > button:hover {
+    transform: scale(1.04);
+}
 
 
 
